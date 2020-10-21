@@ -3,10 +3,10 @@ This is a android application made in Android Studios with Java. It lets you add
 
 
 ## Prerequisites
--Have Android Studio install on your PC
--An Android mobile device(with USB cable connected to PC)
-OR
--You can also run app on emulator in Android Studio
+1. Have Android Studio install on your PC
+2. An Android mobile device(with USB cable connected to PC)
+4. OR
+3. You can also run app on emulator in Android Studio
 
 ## Setup
 
