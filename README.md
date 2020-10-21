@@ -15,8 +15,8 @@ This is a android application made in Android Studios with Java. It lets you add
 4. Wait for the app and gradle to finish loading.
 5. test the application either through the built in-emulator or your android device
 #### debug
-1.Emulator: https://developer.android.com/studio/run/emulator
-2.Android device: https://developer.android.com/studio/run/device
+1. Emulator: https://developer.android.com/studio/run/emulator
+2. Android device: https://developer.android.com/studio/run/device
 
 
 ### Contact
