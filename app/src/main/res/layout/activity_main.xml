@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/deleteDB"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/newcirclebtn"
+        android:elevation="2dp"
+        android:foreground="@android:drawable/ic_menu_close_clear_cancel"
+        android:foregroundTint="#FA434A69"
+        android:gravity="center"
+        android:onClick="createNewContactDialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/takePhotoBtn"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
+
+    <Button
+        android:id="@+id/addNoteBtn"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/newcirclebtn"
+        android:elevation="2dp"
+        android:foreground="@android:drawable/ic_input_add"
+        android:foregroundTint="#FA434A69"
+        android:gravity="center"
+        android:onClick="addNote"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/takePhotoBtn"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
+
+    <View
+        android:id="@+id/colorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layoutbackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridView
+        android:id="@+id/noteLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:addStatesFromChildren="false"
+        android:background="@mipmap/newtestpng"
+        android:horizontalSpacing="0.5dp"
+        android:numColumns="4"
+        android:verticalSpacing="0.5dp"
+        app:layout_constraintBottom_toTopOf="@id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#0975D5"
+        android:clickable="false"
+        android:elevation="1dp"
+        app:buttonGravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/noteLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/noteLayout"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/takePhotoBtn"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/newcirclebtn"
+        android:elevation="2dp"
+        android:foreground="@android:drawable/ic_menu_camera"
+        android:foregroundTint="#FA434A69"
+        android:onClick="addPhoto"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

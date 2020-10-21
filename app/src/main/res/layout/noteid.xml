@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:clickable="true"
+    android:contextClickable="true"
+    android:focusable="auto"
+    android:focusableInTouchMode="true">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/layoutbackground"
+        android:elevation="-1dp"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.43" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/noteText"
+        android:layout_width="330dp"
+        android:layout_height="400dp"
+        android:background="@drawable/notewritelayout"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topictext"
+        app:layout_constraintVertical_bias="0.2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/noteTextInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autoText="true"
+            android:gravity="start"
+            android:hint="Make a note"
+            android:saveEnabled="true"
+            android:textAlignment="gravity"
+            android:textDirection="ltr" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/topictext"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/inputtextlayout"
+        android:hint="Topic:"
+        android:layoutDirection="ltr"
+        android:textDirection="firstStrongLtr"
+        app:hintEnabled="true"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateText"
+        app:layout_constraintVertical_bias="0.02">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/topicTextInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autoLink="none"
+            android:autoText="true"
+            android:gravity="top|left"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:saveEnabled="true"
+            android:singleLine="true"
+            android:textSize="21sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/editNoteBtn2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/newcirclebtn"
+        android:elevation="2dp"
+        android:fontFamily="sans-serif-black"
+        android:foreground="@android:drawable/ic_menu_edit"
+        android:foregroundTint="#FA434A69"
+        android:onClick="editNoteBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
+
+    <Button
+        android:id="@+id/removeNoteBtn"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/newcirclebtn"
+        android:elevation="2dp"
+        android:foreground="@android:drawable/ic_menu_delete"
+        android:foregroundTint="#FA434A69"
+        android:onClick="delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editNoteBtn2"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:alpha="1"
+        android:background="#0975D5"
+        android:clickable="false"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:buttonGravity="bottom"
+        app:layout_column="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_row="1" />
+
+    <EditText
+        android:id="@+id/dateText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:allowUndo="true"
+        android:background="@drawable/inputtextlayout"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:cursorVisible="true"
+        android:editable="true"
+        android:ems="10"
+        android:focusableInTouchMode="true"
+        android:freezesText="true"
+        android:inputType="date|textUri|textShortMessage|textLongMessage|textAutoCorrect|numberSigned|textVisiblePassword|textWebEditText|textMultiLine|textNoSuggestions|textFilter|number|datetime|textWebEmailAddress|textPersonName|text|textPhonetic|textCapSentences|textPassword|textAutoComplete|textImeMultiLine|textPostalAddress|numberDecimal|textEmailAddress|numberPassword|textCapWords|phone|textEmailSubject|textCapCharacters|time|textWebPassword"
+        android:lines="1"
+        android:saveEnabled="true"
+        android:textAlignment="viewStart"
+        android:textIsSelectable="true"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
