@@ -9,7 +9,14 @@ This is a android application made in Android Studios with Java. It lets you add
 2. You can also run app on emulator in Android Studio
 
 ## Setup
-
+1. Start Android Studio and select the "Check out project from Version Control"
+2. Select GIT from the drop down list.
+3. Input the GIT repository into the URL: https://github.com/ZetcH93/IOtools
+4. Wait for the app and gradle to finish loading.
+5. test the application either through the built in-emulator or your android device
+#### debug
+1.Emulator: https://developer.android.com/studio/run/emulator
+2.Android device: https://developer.android.com/studio/run/device
 
 
 ### Contact
