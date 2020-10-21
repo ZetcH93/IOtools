@@ -4,7 +4,6 @@ This is a android application made in Android Studios with Java. It lets you add
 
 Prerequisites
 -Have Android Studio install on your PC
-
 -An Android mobile device(with USB cable connected to PC)
 OR
 -You can also run app on emulator in Android Studio
